@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IoQ-sG-NyX">
-                                <rect key="frame" x="252" y="85" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IoQ-sG-NyX">
+                                <rect key="frame" x="209" y="86" width="183" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="Vkl-Cb-zys"/>
+                                    <constraint firstAttribute="width" constant="183" id="Vkl-Cb-zys"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
@@ -29,14 +29,16 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gve-uY-DOy">
-                                <rect key="frame" x="282" y="201" width="36" height="30"/>
-                                <state key="normal" title="Clear"/>
+                                <rect key="frame" x="266" y="135" width="68" height="30"/>
+                                <state key="normal" title="    Clear    ">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="limpiar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="09m-t7-tAt"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hkF-xC-Gpg">
-                                <rect key="frame" x="180" y="266" width="240" height="314"/>
+                                <rect key="frame" x="180" y="173" width="240" height="314"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ciO-ff-bAP"/>
@@ -45,14 +47,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.86647087488466568" blue="0.42605803457424318" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="hkF-xC-Gpg" secondAttribute="bottom" constant="20" symbolic="YES" id="3gh-D6-rSv"/>
+                            <constraint firstAttribute="bottom" secondItem="hkF-xC-Gpg" secondAttribute="bottom" constant="113" id="3gh-D6-rSv"/>
                             <constraint firstItem="IoQ-sG-NyX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3t0-0b-6zA"/>
-                            <constraint firstItem="Gve-uY-DOy" firstAttribute="top" secondItem="IoQ-sG-NyX" secondAttribute="bottom" constant="86" id="SlX-gt-ueS"/>
-                            <constraint firstItem="IoQ-sG-NyX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="Vah-Bn-Cly"/>
+                            <constraint firstItem="Gve-uY-DOy" firstAttribute="top" secondItem="IoQ-sG-NyX" secondAttribute="bottom" constant="19" id="SlX-gt-ueS"/>
+                            <constraint firstItem="IoQ-sG-NyX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="Vah-Bn-Cly"/>
                             <constraint firstItem="Gve-uY-DOy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iAJ-5w-GXB"/>
-                            <constraint firstItem="hkF-xC-Gpg" firstAttribute="top" secondItem="Gve-uY-DOy" secondAttribute="bottom" constant="35" id="kPQ-Xu-9nk"/>
+                            <constraint firstItem="hkF-xC-Gpg" firstAttribute="top" secondItem="Gve-uY-DOy" secondAttribute="bottom" constant="8" id="kPQ-Xu-9nk"/>
                             <constraint firstItem="hkF-xC-Gpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nfT-Q5-FWq"/>
                         </constraints>
                         <connections>
@@ -60,6 +62,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="boton" destination="Gve-uY-DOy" id="UmN-bi-4dy"/>
                         <outlet property="texto" destination="hkF-xC-Gpg" id="wg6-3b-cuV"/>
                         <outlet property="textoIn" destination="IoQ-sG-NyX" id="bV8-qq-WvR"/>
                     </connections>

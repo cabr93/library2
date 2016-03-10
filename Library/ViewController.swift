@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var texto: UITextView!
     @IBOutlet weak var textoIn: UITextField!
+    @IBOutlet weak var boton: UIButton!
     
     let urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
     
@@ -19,6 +20,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         textoIn.delegate = self
+        boton.layer.cornerRadius = 10
+        boton.layer.masksToBounds = true
+        boton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
+
     }
 
     override func didReceiveMemoryWarning() {
