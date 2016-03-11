@@ -30,6 +30,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gve-uY-DOy">
                                 <rect key="frame" x="266" y="135" width="68" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="    Clear    ">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -47,7 +48,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.86647087488466568" blue="0.42605803457424318" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.83032852564102566" green="0.62802555343501409" blue="0.2095787802833228" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="hkF-xC-Gpg" secondAttribute="bottom" constant="113" id="3gh-D6-rSv"/>
                             <constraint firstItem="IoQ-sG-NyX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3t0-0b-6zA"/>
