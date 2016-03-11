@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         boton.layer.cornerRadius = 10
         boton.layer.masksToBounds = true
         boton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
+        
 
     }
 
@@ -44,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let datos:NSData? = NSData(contentsOfURL: url!)
         if datos != nil{
         let textoS = NSString(data: datos!, encoding: NSUTF8StringEncoding)
-        texto.text = String(textoS)
+        texto.text = textoS as! String
         }
         else {
             let alert = UIAlertController(title:"Error", message: "No hay conexion a Internet", preferredStyle: .Alert)
