@@ -63,15 +63,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     let dico1 = json as! NSDictionary
                     let dico2 = dico1["ISBN:"+texIn] as! NSDictionary
                     let titulo = dico2["title"] as! NSString as String
-                    let todo:String = "Titulo:\n" + titulo
-                    let dico3 = dico2["cover"] as! NSDictionary
-                    let foto = dico3["large"]as! NSString as String
-                    let fot = NSURL(string: foto)
-                    let dat = NSData(contentsOfURL: fot!)
-                    ima.image = UIImage(data:dat!)
-
+                    let dico3 = dico2["authors"] as! [NSDictionary]
                     
+                    var autores = ""
+                    for i in dico3{
+                        if autores == ""{
+                            autores += "-"
+                            autores += i["name"] as! NSString as String
+                        }else{
+                            autores += "\n-"
+                            autores += i["name"] as! NSString as String
+                        }
+                    }
+                    let todo:String = "Titulo:\n" + titulo + "\nAutores:\n" + autores
                     texto.text = todo
+                    let dico4 = dico2["cover"] as! NSDictionary?
+                    if dico4 != nil{
+                        ima.hidden = false
+                        let foto = dico4!["large"]as! NSString as String
+                        let fot = NSURL(string: foto)
+                        let dat = NSData(contentsOfURL: fot!)
+                        ima.image = UIImage(data:dat!)
+                    }
+                    else{
+                        ima.hidden = true
+                    }
+                    
+
                 }
                 catch _ {
                     
