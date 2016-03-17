@@ -28,18 +28,8 @@
                                     <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="0Js-d0-vG6"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gve-uY-DOy">
-                                <rect key="frame" x="266" y="135" width="68" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="    Clear    ">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="limpiar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="09m-t7-tAt"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hkF-xC-Gpg">
-                                <rect key="frame" x="180" y="173" width="240" height="314"/>
+                                <rect key="frame" x="180" y="173" width="240" height="91"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ciO-ff-bAP"/>
@@ -47,15 +37,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lac-kA-oqE">
+                                <rect key="frame" x="180" y="277" width="240" height="289"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83032852564102566" green="0.62802555343501409" blue="0.2095787802833228" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="hkF-xC-Gpg" secondAttribute="bottom" constant="113" id="3gh-D6-rSv"/>
+                            <constraint firstAttribute="bottom" secondItem="hkF-xC-Gpg" secondAttribute="bottom" constant="336" id="3gh-D6-rSv"/>
                             <constraint firstItem="IoQ-sG-NyX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3t0-0b-6zA"/>
-                            <constraint firstItem="Gve-uY-DOy" firstAttribute="top" secondItem="IoQ-sG-NyX" secondAttribute="bottom" constant="19" id="SlX-gt-ueS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lac-kA-oqE" secondAttribute="bottom" constant="34" id="CGZ-fo-5Ef"/>
+                            <constraint firstItem="lac-kA-oqE" firstAttribute="top" secondItem="hkF-xC-Gpg" secondAttribute="bottom" constant="13" id="JZI-p7-6gQ"/>
                             <constraint firstItem="IoQ-sG-NyX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="Vah-Bn-Cly"/>
-                            <constraint firstItem="Gve-uY-DOy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iAJ-5w-GXB"/>
-                            <constraint firstItem="hkF-xC-Gpg" firstAttribute="top" secondItem="Gve-uY-DOy" secondAttribute="bottom" constant="8" id="kPQ-Xu-9nk"/>
+                            <constraint firstItem="hkF-xC-Gpg" firstAttribute="top" secondItem="IoQ-sG-NyX" secondAttribute="bottom" constant="57" id="XIO-lo-uME"/>
+                            <constraint firstItem="lac-kA-oqE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cbA-1c-WMA"/>
+                            <constraint firstItem="lac-kA-oqE" firstAttribute="leading" secondItem="hkF-xC-Gpg" secondAttribute="leading" id="gjr-xs-dLB"/>
                             <constraint firstItem="hkF-xC-Gpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nfT-Q5-FWq"/>
                         </constraints>
                         <connections>
@@ -63,7 +57,8 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="boton" destination="Gve-uY-DOy" id="UmN-bi-4dy"/>
+                        <outlet property="Control" destination="8bC-Xf-vdC" id="g9N-fA-TD8"/>
+                        <outlet property="ima" destination="lac-kA-oqE" id="yxo-yV-PFl"/>
                         <outlet property="texto" destination="hkF-xC-Gpg" id="wg6-3b-cuV"/>
                         <outlet property="textoIn" destination="IoQ-sG-NyX" id="bV8-qq-WvR"/>
                     </connections>
